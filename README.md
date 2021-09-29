@@ -3,7 +3,8 @@ Group Name: TEAM_NAME
 
 [MVP Link](http://cs196.cs.illinois.edu)
 
-Team Members: colinck2
+Team Members: colinck2 runalih2
+
 
 
 Project Manager: csparks3
