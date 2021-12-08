@@ -7,8 +7,8 @@ import ipfshttpclient
 def save_file(client, list_id, server):
     r = requests.get(server + f'/list/{list_id}').json()
 
-    os.system(f'rm -r {list_id}') 
-    os.mkdir(list_id)
+    if not os.path.exists(list_id):
+        os.mkdir(list_id)
     for ipfs_hash, name in r:
         with open(list_id + '/' + name, 'wb') as f:
             f.write(client.cat(ipfs_hash))
